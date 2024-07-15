@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://CooldownButton.gd" type="Script" id=2]
+[ext_resource path="res://assets/Roboto-Medium.ttf" type="FontFile" id=3]
+[ext_resource path="res://assets/icons/boot-stomp.png" type="Texture2D" id=4]
+
+[sub_resource type="FontFile" id=1]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="CooldownButton" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2( 32, 32 )
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 4 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+cooldown = 2.5
+
+[node name="CooldownDisplay" type="TextureProgressBar" parent="."]
+modulate = Color( 0.352941, 0.352941, 0.352941, 1 )
+offset_right = 40.0
+offset_bottom = 40.0
+fill_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -19.0
+grow_horizontal = 0
+theme_override_fonts/font = SubResource( 1 )
+text = "0.0"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="." to="." method="_on_CooldownButton_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,0 +1,93 @@
+[gd_scene load_steps=13 format=3 uid="uid://qpvn0plxyq3w"]
+
+[ext_resource type="Texture2D" uid="uid://dfy5otme0e2br" path="res://assets/icons/bleeding-eye.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://4o51hb6u70ks" path="res://assets/icons/dripping-blade.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cap7lw3mi8aoc" path="res://assets/icons/all-for-one.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bpt1qws68u0wq" path="res://assets/icons/angel-wings.png" id="4"]
+[ext_resource type="PackedScene" path="res://CooldownButton.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://dq0uheh1kdtmg" path="res://assets/icons/battered-axe.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://c641ds1nwrpxe" path="res://assets/icons/bookmark.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://36p8yamhjjy" path="res://assets/icons/energy-arrow.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://b0tln7y6urupc" path="res://assets/icons/arrows-shield.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://by51h77bc8nmx" path="res://assets/icons/hospital-cross.png" id="10"]
+[ext_resource type="Script" path="res://RadialMenuButton.gd" id="11"]
+
+[sub_resource type="Shortcut" id="2"]
+
+[node name="RadialMenuButton" type="TextureButton"]
+offset_left = 469.053
+offset_top = 339.884
+offset_right = 533.053
+offset_bottom = 403.884
+pivot_offset = Vector2(32, 64)
+shortcut = SubResource("2")
+shortcut_in_tooltip = false
+texture_normal = ExtResource("7")
+script = ExtResource("11")
+
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CooldownButton2" parent="Buttons" instance=ExtResource("5")]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("3")
+cooldown = 1.0
+
+[node name="CooldownButton3" parent="Buttons" instance=ExtResource("5")]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("4")
+cooldown = 4.0
+
+[node name="CooldownButton4" parent="Buttons" instance=ExtResource("5")]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("9")
+cooldown = 3.2
+
+[node name="CooldownButton5" parent="Buttons" instance=ExtResource("5")]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("6")
+cooldown = 0.5
+
+[node name="CooldownButton6" parent="Buttons" instance=ExtResource("5")]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("1")
+cooldown = 10.0
+
+[node name="CooldownButton7" parent="Buttons" instance=ExtResource("5")]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("10")
+cooldown = 30.0
+
+[node name="CooldownButton8" parent="Buttons" instance=ExtResource("5")]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("2")
+cooldown = 6.0
+
+[node name="CooldownButton9" parent="Buttons" instance=ExtResource("5")]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("8")
+cooldown = 4.5
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
