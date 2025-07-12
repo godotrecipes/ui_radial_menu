@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://4o51hb6u70ks" path="res://assets/icons/dripping-blade.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://cap7lw3mi8aoc" path="res://assets/icons/all-for-one.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://bpt1qws68u0wq" path="res://assets/icons/angel-wings.png" id="4"]
-[ext_resource type="PackedScene" path="res://CooldownButton.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://mxbff28oue3h" path="res://CooldownButton.tscn" id="5"]
 [ext_resource type="Texture2D" uid="uid://dq0uheh1kdtmg" path="res://assets/icons/battered-axe.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://c641ds1nwrpxe" path="res://assets/icons/bookmark.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://36p8yamhjjy" path="res://assets/icons/energy-arrow.png" id="8"]
 [ext_resource type="Texture2D" uid="uid://b0tln7y6urupc" path="res://assets/icons/arrows-shield.png" id="9"]
 [ext_resource type="Texture2D" uid="uid://by51h77bc8nmx" path="res://assets/icons/hospital-cross.png" id="10"]
-[ext_resource type="Script" path="res://RadialMenuButton.gd" id="11"]
+[ext_resource type="Script" uid="uid://b1jqulkl3lcat" path="res://RadialMenuButton.gd" id="11"]
 
 [sub_resource type="Shortcut" id="2"]
 

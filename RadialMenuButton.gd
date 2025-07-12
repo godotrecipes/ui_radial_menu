@@ -50,4 +50,3 @@ func _on_tween_finished():
 	disabled = false
 	if not active:
 		$Buttons.hide()
-
